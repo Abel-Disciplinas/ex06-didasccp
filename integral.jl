@@ -41,5 +41,5 @@ function simpson_adaptivo_recursivo(f, a, b, ϵ, I)
     if abs(I-esquerda-direita)<15*eps
         return esquerda+direita
     end
-    return simpson_adaptivo_recursivo(f,a,c,eps,esquerda)+simpson_adaptivo_recursivo(f,c,b,eps,direita)
+    return simpson_adaptivo_recursivo(f,a,c,eps/2,esquerda)+simpson_adaptivo_recursivo(f,c,b,eps/2,direita)
 end
